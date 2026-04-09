@@ -7,8 +7,8 @@ const sampleListings = [
     description:
       "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
     image: {
-      filename: "ApnaStay_DEV/qjqjlyldxwxw9qquteg0",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716987958/ApnaStay_DEV/qjqjlyldxwxw9qquteg0.jpg",
+      filename: "StayFinder_DEV/qjqjlyldxwxw9qquteg0",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716987958/StayFinder_DEV/qjqjlyldxwxw9qquteg0.jpg",
     },
     price: 1500,
     location: "Malibu",
@@ -45,8 +45,8 @@ const sampleListings = [
     description:
       "Stay in the heart of the city in this stylish loft apartment. Perfect for urban explorers!",
     image: {
-      filename: "ApnaStay_DEV/namhk5ymo5bnicfmcjlk",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991317/ApnaStay_DEV/namhk5ymo5bnicfmcjlk.webp",
+      filename: "StayFinder_DEV/namhk5ymo5bnicfmcjlk",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991317/StayFinder_DEV/namhk5ymo5bnicfmcjlk.webp",
     },
     price: 1200,
     location: "New York City",
@@ -83,8 +83,8 @@ const sampleListings = [
     description:
       "Unplug and unwind in this peaceful mountain cabin. Surrounded by nature, it's a perfect place to recharge.",
     image: {
-      filename: "ApnaStay_DEV/by9ikfxvff10rzennoqx",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716988379/ApnaStay_DEV/by9ikfxvff10rzennoqx.jpg",
+      filename: "StayFinder_DEV/by9ikfxvff10rzennoqx",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716988379/StayFinder_DEV/by9ikfxvff10rzennoqx.jpg",
     },
     price: 1000,
     location: "Aspen",
@@ -121,8 +121,8 @@ const sampleListings = [
     description:
       "Experience the charm of Tuscany in this beautifully restored villa. Explore the rolling hills and vineyards.",
     image: {
-      filename: "ApnaStay_DEV/bvzxglqyickrvjipdmlx",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716988478/ApnaStay_DEV/bvzxglqyickrvjipdmlx.jpg",
+      filename: "StayFinder_DEV/bvzxglqyickrvjipdmlx",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716988478/StayFinder_DEV/bvzxglqyickrvjipdmlx.jpg",
     },
     price: 2500,
     location: "Florence",
@@ -159,8 +159,8 @@ const sampleListings = [
     description:
       "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
     image: {
-      filename: "ApnaStay_DEV/hutflk3nyzaupi9x0ptm",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716988577/ApnaStay_DEV/hutflk3nyzaupi9x0ptm.jpg",
+      filename: "StayFinder_DEV/hutflk3nyzaupi9x0ptm",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716988577/StayFinder_DEV/hutflk3nyzaupi9x0ptm.jpg",
     },
     price: 800,
     location: "Portland",
@@ -197,8 +197,8 @@ const sampleListings = [
     description:
       "Step out of your door onto the sandy beach. This beachfront condo offers the ultimate relaxation.",
     image: {
-      filename: "ApnaStay_DEV/wme2xvhlclk68mfp0in5",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716989163/ApnaStay_DEV/wme2xvhlclk68mfp0in5.jpg",
+      filename: "StayFinder_DEV/wme2xvhlclk68mfp0in5",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716989163/StayFinder_DEV/wme2xvhlclk68mfp0in5.jpg",
     },
     price: 2000,
     location: "Cancun",
@@ -235,8 +235,8 @@ const sampleListings = [
     description:
       "Spend your days fishing and kayaking on the serene lake. This cozy cabin is perfect for outdoor enthusiasts.",
     image: {
-      filename: "ApnaStay_DEV/gfofvk7cupd3npjo8heu",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716989294/ApnaStay_DEV/gfofvk7cupd3npjo8heu.jpg",
+      filename: "StayFinder_DEV/gfofvk7cupd3npjo8heu",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716989294/StayFinder_DEV/gfofvk7cupd3npjo8heu.jpg",
     },
     price: 900,
     location: "Lake Tahoe",
@@ -273,8 +273,8 @@ const sampleListings = [
     description:
       "Indulge in luxury living with panoramic city views from this stunning penthouse apartment.",
     image: {
-      filename: "ApnaStay_DEV/fcwnhmpnm7jqh1u43ca7",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716990160/ApnaStay_DEV/fcwnhmpnm7jqh1u43ca7.webp",
+      filename: "StayFinder_DEV/fcwnhmpnm7jqh1u43ca7",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716990160/StayFinder_DEV/fcwnhmpnm7jqh1u43ca7.webp",
     },
     price: 3500,
     location: "Los Angeles",
@@ -311,8 +311,8 @@ const sampleListings = [
     description:
       "Hit the slopes right from your doorstep in this ski-in/ski-out chalet in the Swiss Alps.",
     image: {
-      filename: "ApnaStay_DEV/k1cmlc5qzwss3ifxhpuy",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716989774/ApnaStay_DEV/k1cmlc5qzwss3ifxhpuy.jpg",
+      filename: "StayFinder_DEV/k1cmlc5qzwss3ifxhpuy",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716989774/StayFinder_DEV/k1cmlc5qzwss3ifxhpuy.jpg",
     },
     price: 3000,
     location: "Verbier",
@@ -349,8 +349,8 @@ const sampleListings = [
     description:
       "Experience the thrill of the wild in a comfortable safari lodge. Witness the Great Migration up close.",
     image: {
-      filename: "ApnaStay_DEV/djqdlt09pkxr2ulo3brg",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716990353/ApnaStay_DEV/djqdlt09pkxr2ulo3brg.jpg",
+      filename: "StayFinder_DEV/djqdlt09pkxr2ulo3brg",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716990353/StayFinder_DEV/djqdlt09pkxr2ulo3brg.jpg",
     },
     price: 4000,
     location: "Serengeti National Park",
@@ -387,8 +387,8 @@ const sampleListings = [
     description:
       "Stay in a piece of history in this beautifully preserved canal house in Amsterdam's iconic district.",
     image: {
-      filename: "ApnaStay_DEV/ddv5nd4vmimrm2nlhyni",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716990541/ApnaStay_DEV/ddv5nd4vmimrm2nlhyni.jpg",
+      filename: "StayFinder_DEV/ddv5nd4vmimrm2nlhyni",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716990541/StayFinder_DEV/ddv5nd4vmimrm2nlhyni.jpg",
     },
     price: 1800,
     location: "Amsterdam",
@@ -425,8 +425,8 @@ const sampleListings = [
     description:
       "Have an entire island to yourself for a truly exclusive and unforgettable vacation experience.",
     image: {
-      filename: "ApnaStay_DEV/llidawturxcrg8qhnyys",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716990827/ApnaStay_DEV/llidawturxcrg8qhnyys.jpg",
+      filename: "StayFinder_DEV/llidawturxcrg8qhnyys",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716990827/StayFinder_DEV/llidawturxcrg8qhnyys.jpg",
     },
     price: 10000,
     location: "Fiji",
@@ -463,8 +463,8 @@ const sampleListings = [
     description:
       "Escape to the picturesque Cotswolds in this quaint and charming cottage with a thatched roof.",
     image: {
-      filename: "ApnaStay_DEV/yiymbouxckg3tg9zos1t",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716990989/ApnaStay_DEV/yiymbouxckg3tg9zos1t.jpg",
+      filename: "StayFinder_DEV/yiymbouxckg3tg9zos1t",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716990989/StayFinder_DEV/yiymbouxckg3tg9zos1t.jpg",
     },
     price: 1200,
     location: "Cotswolds",
@@ -501,8 +501,8 @@ const sampleListings = [
     description:
       "Step back in time in this elegant historic brownstone located in the heart of Boston.",
     image: {
-      filename: "ApnaStay_DEV/e6uxmyfmpaheyy0k75ad",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991126/ApnaStay_DEV/e6uxmyfmpaheyy0k75ad.jpg",
+      filename: "StayFinder_DEV/e6uxmyfmpaheyy0k75ad",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991126/StayFinder_DEV/e6uxmyfmpaheyy0k75ad.jpg",
     },
     price: 2200,
     location: "Boston",
@@ -539,8 +539,8 @@ const sampleListings = [
     description:
       "Relax on the sandy shores of Bali in this beautiful beachfront bungalow with a private pool.",
     image: {
-      filename: "ApnaStay_DEV/a0rvxo84act3vfznez98",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991187/ApnaStay_DEV/a0rvxo84act3vfznez98.jpg",
+      filename: "StayFinder_DEV/a0rvxo84act3vfznez98",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991187/StayFinder_DEV/a0rvxo84act3vfznez98.jpg",
     },
     price: 1800,
     location: "Bali",
@@ -577,8 +577,8 @@ const sampleListings = [
     description:
       "Enjoy breathtaking mountain views from this cozy cabin in the Canadian Rockies.",
     image: {
-      filename: "ApnaStay_DEV/a328pyw9dmpsgnnq7x0p",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991388/ApnaStay_DEV/a328pyw9dmpsgnnq7x0p.jpg",
+      filename: "StayFinder_DEV/a328pyw9dmpsgnnq7x0p",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991388/StayFinder_DEV/a328pyw9dmpsgnnq7x0p.jpg",
     },
     price: 1500,
     location: "Banff",
@@ -615,8 +615,8 @@ const sampleListings = [
     description:
       "Step into the glamour of the 1920s in this stylish Art Deco apartment in South Beach.",
     image: {
-      filename: "ApnaStay_DEV/oscydu4gaq1h1lgls8gz",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991773/ApnaStay_DEV/oscydu4gaq1h1lgls8gz.jpg",
+      filename: "StayFinder_DEV/oscydu4gaq1h1lgls8gz",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991773/StayFinder_DEV/oscydu4gaq1h1lgls8gz.jpg",
     },
     price: 1600,
     location: "Miami",
@@ -653,8 +653,8 @@ const sampleListings = [
     description:
       "Escape to a tropical paradise in this luxurious villa with a private infinity pool in Phuket.",
     image: {
-      filename: "ApnaStay_DEV/zbvktayoqzlmha4iv8ai",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991878/ApnaStay_DEV/zbvktayoqzlmha4iv8ai.jpg",
+      filename: "StayFinder_DEV/zbvktayoqzlmha4iv8ai",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716991878/StayFinder_DEV/zbvktayoqzlmha4iv8ai.jpg",
     },
     price: 3000,
     location: "Phuket",
@@ -691,8 +691,8 @@ const sampleListings = [
     description:
       "Live like royalty in this historic castle in the Scottish Highlands. Explore the rugged beauty of the area.",
     image: {
-      filename: "ApnaStay_DEV/vuo9zehyodtdo6dhsqsr",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992061/ApnaStay_DEV/vuo9zehyodtdo6dhsqsr.webp",
+      filename: "StayFinder_DEV/vuo9zehyodtdo6dhsqsr",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992061/StayFinder_DEV/vuo9zehyodtdo6dhsqsr.webp",
     },
     price: 4000,
     location: "Scottish Highlands",
@@ -729,8 +729,8 @@ const sampleListings = [
     description:
       "Experience luxury in the middle of the desert in this opulent oasis in Dubai with a private pool.",
     image: {
-      filename: "ApnaStay_DEV/uxnuhzyo6ozuy6visfqj",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992304/ApnaStay_DEV/uxnuhzyo6ozuy6visfqj.jpg",
+      filename: "StayFinder_DEV/uxnuhzyo6ozuy6visfqj",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992304/StayFinder_DEV/uxnuhzyo6ozuy6visfqj.jpg",
     },
     price: 5000,
     location: "Dubai",
@@ -767,8 +767,8 @@ const sampleListings = [
     description:
       "Unplug and unwind in this cozy log cabin surrounded by the natural beauty of Montana.",
     image: {
-      filename: "ApnaStay_DEV/mz8iufrrve3dxv4qsd4t",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992388/ApnaStay_DEV/mz8iufrrve3dxv4qsd4t.jpg",
+      filename: "StayFinder_DEV/mz8iufrrve3dxv4qsd4t",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992388/StayFinder_DEV/mz8iufrrve3dxv4qsd4t.jpg",
     },
     price: 1100,
     location: "Montana",
@@ -805,8 +805,8 @@ const sampleListings = [
     description:
       "Enjoy the crystal-clear waters of the Mediterranean in this beautiful beachfront villa on a Greek island.",
     image: {
-      filename: "ApnaStay_DEV/iqqmjypakdk6azfn21x1",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992552/ApnaStay_DEV/iqqmjypakdk6azfn21x1.jpg",
+      filename: "StayFinder_DEV/iqqmjypakdk6azfn21x1",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992552/StayFinder_DEV/iqqmjypakdk6azfn21x1.jpg",
     },
     price: 2500,
     location: "Mykonos",
@@ -843,8 +843,8 @@ const sampleListings = [
     description:
       "Stay in an eco-friendly treehouse nestled in the forest. It's the perfect escape for nature lovers.",
     image: {
-      filename: "ApnaStay_DEV/arvhjg9y8ehc8heq5dqi",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992704/ApnaStay_DEV/arvhjg9y8ehc8heq5dqi.webp",
+      filename: "StayFinder_DEV/arvhjg9y8ehc8heq5dqi",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992704/StayFinder_DEV/arvhjg9y8ehc8heq5dqi.webp",
     },
     price: 750,
     location: "Costa Rica",
@@ -881,8 +881,8 @@ const sampleListings = [
     description:
       "Experience the charm of historic Charleston in this beautifully restored cottage with a private garden.",
     image: {
-      filename: "ApnaStay_DEV/k9qiqwbzo55fimvfay8q",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992900/ApnaStay_DEV/k9qiqwbzo55fimvfay8q.jpg",
+      filename: "StayFinder_DEV/k9qiqwbzo55fimvfay8q",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716992900/StayFinder_DEV/k9qiqwbzo55fimvfay8q.jpg",
     },
     price: 1600,
     location: "Charleston",
@@ -919,8 +919,8 @@ const sampleListings = [
     description:
       "Explore the vibrant city of Tokyo from this modern and centrally located apartment.",
     image: {
-      filename: "ApnaStay_DEV/igwuigcrdfgaisf1e4zn",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716993101/ApnaStay_DEV/igwuigcrdfgaisf1e4zn.jpg",
+      filename: "StayFinder_DEV/igwuigcrdfgaisf1e4zn",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716993101/StayFinder_DEV/igwuigcrdfgaisf1e4zn.jpg",
     },
     price: 2000,
     location: "Tokyo",
@@ -957,8 +957,8 @@ const sampleListings = [
     description:
       "Spend your days by the lake in this cozy cabin in the scenic White Mountains of New Hampshire.",
     image: {
-      filename: "ApnaStay_DEV/evpuwtpctsbdnxnqvgox",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716993292/ApnaStay_DEV/evpuwtpctsbdnxnqvgox.jpg",
+      filename: "StayFinder_DEV/evpuwtpctsbdnxnqvgox",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716993292/StayFinder_DEV/evpuwtpctsbdnxnqvgox.jpg",
     },
     price: 1200,
     location: "New Hampshire",
@@ -995,8 +995,8 @@ const sampleListings = [
     description:
       "Indulge in luxury in this overwater villa in the Maldives with stunning views of the Indian Ocean.",
     image: {
-      filename: "ApnaStay_DEV/m0hwiwvtmhi4kbtorztw",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716993352/ApnaStay_DEV/m0hwiwvtmhi4kbtorztw.jpg",
+      filename: "StayFinder_DEV/m0hwiwvtmhi4kbtorztw",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716993352/StayFinder_DEV/m0hwiwvtmhi4kbtorztw.jpg",
     },
     price: 6000,
     location: "Maldives",
@@ -1033,8 +1033,8 @@ const sampleListings = [
     description:
       "Hit the slopes in style with this luxurious ski chalet in the world-famous Aspen ski resort.",
     image: {
-      filename: "ApnaStay_DEV/ckriqwxzfzourxeyilbv",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716993504/ApnaStay_DEV/ckriqwxzfzourxeyilbv.webp",
+      filename: "StayFinder_DEV/ckriqwxzfzourxeyilbv",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716993504/StayFinder_DEV/ckriqwxzfzourxeyilbv.webp",
     },
     price: 4000,
     location: "Aspen",
@@ -1071,8 +1071,8 @@ const sampleListings = [
     description:
       "Escape to a secluded beach house on the Pacific coast of Costa Rica. Surf, relax, and unwind.",
     image: {
-      filename: "ApnaStay_DEV/zyqegxq7wfomfzg9pioq",
-      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716993785/ApnaStay_DEV/zyqegxq7wfomfzg9pioq.webp",
+      filename: "StayFinder_DEV/zyqegxq7wfomfzg9pioq",
+      url: "https://res.cloudinary.com/dhawrroef/image/upload/v1716993785/StayFinder_DEV/zyqegxq7wfomfzg9pioq.webp",
     },
     price: 1800,
     location: "Costa Rica",
