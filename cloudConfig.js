@@ -10,7 +10,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
-    folder: "StayFinder_DEV",
+    folder: "ApnaStay_DEV",
     allowedFormats: ["png", "jpg", "jpeg", "webp"],
   },
 });
