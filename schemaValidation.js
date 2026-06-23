@@ -21,3 +21,17 @@ module.exports.reviewSchema = Joi.object({
     comment: Joi.string().required(),
   }).required(),
 });
+
+module.exports.reservationSchema = Joi.object({
+  reservation: Joi.object({
+    checkIn: Joi.date().iso().required(),
+    checkOut: Joi.date()
+      .iso()
+      .greater(Joi.ref("checkIn"))
+      .required()
+      .messages({
+        "date.greater": "Check-out date must be after the check-in date",
+      }),
+    guests: Joi.number().integer().min(1).max(20).required(),
+  }).required(),
+});

@@ -3,6 +3,8 @@ const router = express.Router();
 const wrapAsync = require("../utils/wrapAsync.js");
 const { isLoggedIn, isOwner, validateListing } = require("../middlewares.js");
 const listingController = require("../controllers/listings.js");
+const reservationController = require("../controllers/reservations.js");
+const { validateReservation } = require("../middlewares.js");
 const multer = require("multer");
 const { storage } = require("../cloudConfig.js");
 const upload = multer({ storage });
@@ -22,6 +24,13 @@ router.get("/new", isLoggedIn, listingController.renderNewForm);
 router.get("/filter/:id", wrapAsync(listingController.filter));
 router.get("/search", listingController.search);
 
+router.post(
+  "/:id/reservations",
+  isLoggedIn,
+  validateReservation,
+  wrapAsync(reservationController.createReservation)
+);
+
 router
   .route("/:id")
   .get(wrapAsync(listingController.showListing))
@@ -39,12 +48,6 @@ router.get(
   isLoggedIn,
   isOwner,
   wrapAsync(listingController.renderEditForm)
-);
-
-router.get(
-  "/:id/reservelisting",
-  isLoggedIn,
-  wrapAsync(listingController.reserveListing)
 );
 
 module.exports = router;

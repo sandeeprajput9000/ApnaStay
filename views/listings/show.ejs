@@ -42,10 +42,45 @@
                         </p>
                     </div>
                 </div>
-                <div class="show-btns d-flex flex-column flex-md-row justify-content-center gap-2 gap-md-3">
-                    <form action="/listings/<%=listing._id%>/reservelisting" method="GET">
-                        <button class="btn btn-success reserve-btn">Reserve</button>
-                    </form>
+                <div class="reservation-box mt-4">
+                    <h4 class="mb-3">Reserve this stay</h4>
+                    <% if(currUser && existingReservation) { %>
+                        <p class="mb-3"><i class="fa-solid fa-circle-check text-success"></i> You have already
+                            reserved this property.</p>
+                        <a href="/reservations" class="btn btn-success reserve-btn">Manage reservation</a>
+                    <% } else if(currUser) { %>
+                        <form action="/listings/<%= listing._id %>/reservations" method="POST"
+                            class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-4">
+                                <label for="checkIn" class="form-label">Check-in</label>
+                                <input type="date" class="form-control" id="checkIn" name="reservation[checkIn]"
+                                    min="<%= minDate %>" required>
+                                <div class="invalid-feedback">Choose a valid check-in date.</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="checkOut" class="form-label">Check-out</label>
+                                <input type="date" class="form-control" id="checkOut" name="reservation[checkOut]"
+                                    min="<%= minDate %>" required>
+                                <div class="invalid-feedback">Choose a valid check-out date.</div>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="guests" class="form-label">Guests</label>
+                                <input type="number" class="form-control" id="guests" name="reservation[guests]"
+                                    min="1" max="20" value="1" required>
+                                <div class="invalid-feedback">Enter 1 to 20 guests.</div>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-end">
+                                <button class="btn btn-success reserve-btn w-100">Reserve</button>
+                            </div>
+                        </form>
+                        <p class="reservation-note mt-2 mb-0">
+                            &#8377;<%= listing.price.toLocaleString("en-IN") %> per night. Final total depends on your
+                            selected dates.
+                        </p>
+                    <% } else { %>
+                        <p class="mb-3">Log in to reserve this property and manage it from your account.</p>
+                        <a href="/login" class="btn btn-success reserve-btn">Log in to reserve</a>
+                    <% } %>
                 </div>
                 <% if(currUser && currUser._id.equals(listing.owner._id)){ %>
                     <div class="show-btns d-flex flex-column flex-md-row justify-content-center gap-2 gap-md-3 mt-3">

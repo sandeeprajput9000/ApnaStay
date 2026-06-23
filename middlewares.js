@@ -1,6 +1,11 @@
 const Listing = require("./models/listing");
 const Review = require("./models/review");
-const { listingSchema, reviewSchema } = require("./schemaValidation");
+const Reservation = require("./models/reservation");
+const {
+  listingSchema,
+  reviewSchema,
+  reservationSchema,
+} = require("./schemaValidation");
 const ExpressError = require("./utils/ExpressError");
 
 module.exports.isLoggedIn = (req, res, next) => {
@@ -58,5 +63,31 @@ module.exports.isReviewAuthor = async (req, res, next) => {
     req.flash("error", "You are not the author of this review!");
     return res.redirect(`/listings/${id}`);
   }
+  next();
+};
+
+module.exports.validateReservation = (req, res, next) => {
+  const { error } = reservationSchema.validate(req.body);
+  if (error) {
+    const errMsg = error.details.map((el) => el.message).join(", ");
+    throw new ExpressError(400, errMsg);
+  }
+  next();
+};
+
+module.exports.isReservationOwner = async (req, res, next) => {
+  const reservation = await Reservation.findById(req.params.id);
+
+  if (!reservation) {
+    req.flash("error", "Reservation does not exist!");
+    return res.redirect("/reservations");
+  }
+
+  if (!reservation.guest.equals(req.user._id)) {
+    req.flash("error", "You cannot manage another user's reservation!");
+    return res.redirect("/reservations");
+  }
+
+  req.reservation = reservation;
   next();
 };

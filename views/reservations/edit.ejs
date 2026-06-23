@@ -1,0 +1,51 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row justify-content-center py-4">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card reservation-edit-card">
+            <img src="<%= reservation.listing.image.url %>" class="reservation-edit-image"
+                alt="<%= reservation.listing.title %>">
+            <div class="card-body p-4">
+                <h2 class="mb-1">Edit reservation</h2>
+                <p class="text-muted mb-4"><%= reservation.listing.title %> &middot;
+                    <%= reservation.listing.location %></p>
+
+                <form action="/reservations/<%= reservation._id %>?_method=PUT" method="POST"
+                    class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="checkIn" class="form-label">Check-in</label>
+                            <input type="date" class="form-control" id="checkIn" name="reservation[checkIn]"
+                                min="<%= minDate %>" value="<%= reservation.checkIn.toISOString().split('T')[0] %>"
+                                required>
+                            <div class="invalid-feedback">Choose a valid check-in date.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="checkOut" class="form-label">Check-out</label>
+                            <input type="date" class="form-control" id="checkOut" name="reservation[checkOut]"
+                                min="<%= minDate %>" value="<%= reservation.checkOut.toISOString().split('T')[0] %>"
+                                required>
+                            <div class="invalid-feedback">Check-out must be after check-in.</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="guests" class="form-label">Guests</label>
+                            <input type="number" class="form-control" id="guests" name="reservation[guests]" min="1"
+                                max="20" value="<%= reservation.guests %>" required>
+                            <div class="invalid-feedback">Enter 1 to 20 guests.</div>
+                        </div>
+                    </div>
+
+                    <p class="reservation-note mt-3">
+                        Rate: &#8377;<%= reservation.pricePerNight.toLocaleString("en-IN") %> per night. Your total will
+                        update when you save.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+                        <button class="btn btn-danger">Save changes</button>
+                        <a href="/reservations" class="btn btn-outline-dark">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

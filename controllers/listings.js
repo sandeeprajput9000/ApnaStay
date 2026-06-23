@@ -1,4 +1,5 @@
 const Listing = require("../models/listing");
+const Reservation = require("../models/reservation");
 const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 const mapToken = process.env.MAP_TOKEN;
 const geoCodingClient = mbxGeocoding({ accessToken: mapToken });
@@ -19,9 +20,18 @@ module.exports.showListing = async (req, res) => {
     .populate("owner");
   if (!listing) {
     req.flash("error", "Listing you requested for does not exist!");
-    res.redirect("/listings");
+    return res.redirect("/listings");
   }
-  res.render("listings/show.ejs", { listing });
+  const today = new Date();
+  const minDate = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, "0"),
+    String(today.getDate()).padStart(2, "0"),
+  ].join("-");
+  const existingReservation = req.user
+    ? await Reservation.findOne({ listing: listing._id, guest: req.user._id })
+    : null;
+  res.render("listings/show.ejs", { listing, minDate, existingReservation });
 };
 
 module.exports.createListing = async (req, res, next) => {
@@ -177,10 +187,4 @@ module.exports.destroyListing = async (req, res) => {
   console.log(deletedListing);
   req.flash("success", "Listing deleted!");
   res.redirect("/listings");
-};
-
-module.exports.reserveListing = async (req, res) => {
-  let { id } = req.params;
-  req.flash("success", "Reservation Details sent to your Email!");
-  res.redirect(`/listings/${id}`);
 };

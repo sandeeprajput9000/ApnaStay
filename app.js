@@ -19,6 +19,7 @@ const User = require("./models/user.js");
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
+const reservationRouter = require("./routes/reservation.js");
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.engine("ejs", ejsMate);
@@ -27,30 +28,52 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 
-const dbUrl = process.env.ATLASDB_URL;
+const dbName = process.env.ATLASDB_NAME || "test";
+const dbUrl = buildDatabaseUrl(process.env.ATLASDB_URL);
 
-main()
-  .then(() => {
-    console.log("connected to DB");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+function buildDatabaseUrl(srvUrl) {
+  if (!srvUrl) {
+    throw new Error("ATLASDB_URL is missing. Add it to the .env file.");
+  }
 
-async function main() {
-  await mongoose.connect(dbUrl);
+  const seedHosts = process.env.ATLASDB_SEED_HOSTS;
+  if (!seedHosts || !srvUrl.startsWith("mongodb+srv://")) {
+    return srvUrl;
+  }
+
+  const parsedUrl = new URL(srvUrl);
+  const credentials = parsedUrl.username
+    ? `${parsedUrl.username}${parsedUrl.password ? `:${parsedUrl.password}` : ""}@`
+    : "";
+  const options = new URLSearchParams(parsedUrl.searchParams);
+
+  options.set("tls", "true");
+  options.set("authSource", options.get("authSource") || "admin");
+  if (process.env.ATLASDB_REPLICA_SET) {
+    options.set("replicaSet", process.env.ATLASDB_REPLICA_SET);
+  }
+
+  return `mongodb://${credentials}${seedHosts}/${dbName}?${options.toString()}`;
 }
 
+const mongoClientPromise = mongoose
+  .connect(dbUrl, {
+    dbName,
+    serverSelectionTimeoutMS: 15000,
+  })
+  .then(() => mongoose.connection.getClient());
+
 const store = MongoStore.create({
-  mongoUrl: dbUrl,
+  clientPromise: mongoClientPromise,
+  dbName,
   crypto: {
     secret: process.env.SECRET,
   },
   touchAfter: 24 * 2600,
 });
 
-store.on("error", () => {
-  console.log("ERROR in MONGO SESSION STORE", err);
+store.on("error", (err) => {
+  console.error("ERROR in MONGO SESSION STORE", err);
 });
 
 const sessionOptions = {
@@ -88,6 +111,7 @@ app.get("/", (req, res) => {
 
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
+app.use("/reservations", reservationRouter);
 app.use("/", userRouter);
 
 app.all("*", (req, res, next) => {
@@ -100,6 +124,18 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
-});
+
+async function startServer() {
+  try {
+    await mongoClientPromise;
+    console.log("Connected to MongoDB");
+    app.listen(PORT, () => {
+      console.log(`Listening on port ${PORT}`);
+    });
+  } catch (err) {
+    console.error("MongoDB connection failed:", err.message);
+    process.exitCode = 1;
+  }
+}
+
+startServer();
